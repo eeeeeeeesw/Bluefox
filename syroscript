@@ -1554,5 +1554,5 @@ local Tab = Window.NewTab("Return to main")
 local Section = Tab.NewSection("Are you sure?")
 
 	local Button = Section.NewButton("This is permernant and cannot be change",function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Fattythefatty/bluefoxscript/main/bluefox%20script.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/bluefox%20script.lua"))()
 	end)
