@@ -49,9 +49,6 @@ local Button = Section.NewButton("old script",function()
 
 	local Tab = Window.NewTab("Other stuff")
 	local Section = Tab.NewSection("Have a friend :3")
-	local Button = Section.NewButton("ThunderBot",function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/test"))()
-	end)
 local Section = Tab.NewSection("Select")
 
 local ButtonAdult = Section.NewButton("pulse lag", function()
