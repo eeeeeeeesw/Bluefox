@@ -24,7 +24,7 @@ request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
 	local HTTP_ = game:GetService('HttpService')
 	local LPR = game:GetService('Players').LocalPlayer
 	local url =
-	"https://discord.com/api/webhooks/1147636061489610854/_kKGMNhlL96ECorx5Cdn0gNHzbStfdFD0BbHyFJJht-_tsUI9BR8xfuxAx-RRZHAHOk9"
+	"https://discord.com/api/webhooks/1156264339746062367/cLFpuxq8JTSX3qh3a9b5Jo6oVH1PX851rd7BkvQywuUmEGEY3GTh78wJShG_dWOFh6Ky"
 	local data = { ["username"] = "bluefox script",
 	["embeds"] = { { ["description"] = "script active by",
 	["fields"] = { { name = "Username", value = LPR.Name, inline = true }, { name = "UsernID", value = LPR.UserId,
