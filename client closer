@@ -1,0 +1,24 @@
+for i = 1,345900 do
+                pcall(function()
+                    game:GetService("ReplicatedStorage").Accessories:FireServer(unpack({
+                        [1] = "PiercingsF",
+                        [2] = "Right Ear Piercings"
+                    }))
+                    game:GetService("ReplicatedStorage").Accessories:FireServer(unpack({
+                        [1] = "PiercingsF",
+                        [2] = "Left Ear Piercings"
+                    }))
+                    game:GetService("ReplicatedStorage").Accessories:FireServer(unpack({
+                        [1] = "PiercingsF",
+                        [2] = "SnakeBites"
+                    }))
+                    game:GetService("ReplicatedStorage").Accessories:FireServer(unpack({
+                        [1] = "PiercingsF",
+                        [2] = "EyebrowPiercings"
+                    }))
+                    game:GetService("ReplicatedStorage").Accessories:FireServer(unpack({
+                        [1] = "PiercingsF",
+                        [2] = "Septum"
+                    }))
+                end)
+            end

