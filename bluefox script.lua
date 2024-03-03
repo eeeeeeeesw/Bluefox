@@ -1129,7 +1129,7 @@ local testers = {
 }
 if testers[game.Players.LocalPlayer.UserId] then
 print("hi")
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Fattythefatty/bluefoxscript/main/syroscript'))();
+loadstring(game:HttpGet('https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/syroscript'))();
 else
 print("not a tester")
 			local fullMessage = "im not a tester" 
