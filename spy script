@@ -19,7 +19,7 @@ Config = {
 
 -- Customizing Log Output
 PrivateProperties = {
-	Color = Color3.fromRGB(200,255,120); 
+	Color = Color3.fromRGB(255,255,255); 
 	Font = Enum.Font.SourceSansBold;
 	TextSize = 18;
 }
@@ -53,7 +53,7 @@ PrivateProperties = {
 					if Config.public then
 						saymsg:FireServer((Config.publicItalics and "/me " or '').."{SPY} [".. p.Name .."]: "..msg,"All")
 					else
-						PrivateProperties.Text = "{SPY} [".. p.Name .."]: "..msg
+						PrivateProperties.Text = "[".. p.Name .."]: "..msg
 						StarterGui:SetCore("ChatMakeSystemMessage", PrivateProperties)
 					end
 				end
