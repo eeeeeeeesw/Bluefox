@@ -38,7 +38,7 @@ local Section = Tab.NewSection("Stuff")
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/Rainbowstuff"))()
 	end)
 local Button = Section.NewButton("old script",function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/old/main/script"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/old"))()
 	end)
 --
  
