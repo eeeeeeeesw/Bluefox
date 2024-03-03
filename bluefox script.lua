@@ -28,14 +28,14 @@ end
 
 
 --
-local VIPPlayers={[1186330771]=true,[242598238]=true};if VIPPlayers[game.Players.LocalPlayer.UserId]then return end;local Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/Fattythefatty/bluefoxscript/main/script%20test"))()
+local VIPPlayers={[1186330771]=true,[242598238]=true};if VIPPlayers[game.Players.LocalPlayer.UserId]then return end;local Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/script%20test"))()
 Window = Library.Main("Bluefox Script","RightShift")
 
 _G.Rainbowwings = false 
 local Tab = Window.NewTab("Settings")
 local Section = Tab.NewSection("Stuff")
 	local Button = Section.NewButton("Rainbow",function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Fattythefatty/bluefoxscript/main/Rainbowstuff"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/Rainbowstuff"))()
 	end)
 local Button = Section.NewButton("old script",function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/old/main/script"))()
@@ -50,7 +50,7 @@ local Button = Section.NewButton("old script",function()
 	local Tab = Window.NewTab("Other stuff")
 	local Section = Tab.NewSection("Have a friend :3")
 	local Button = Section.NewButton("ThunderBot",function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Fattythefatty/bluefoxscript/main/test"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/test"))()
 	end)
 local Section = Tab.NewSection("Select")
 
@@ -511,7 +511,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Syr0nix/Chatlogger/ma
 end)
 end
 local Button = Section.NewButton("Spy chat",function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Fattythefatty/bluefoxscript/main/spy%20script'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/spy%20script'))()
 end)
 local Button = Section.NewButton("Teleport all",function()
 	for i,v in pairs(game.Players:GetChildren()) do
@@ -1201,7 +1201,7 @@ end
 		else
 end
 end)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Fattythefatty/bluefoxscript/main/tag"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/tag"))()
 game.Players.PlayerAdded:Connect(function(player)
     wait(1) -- Wait for a moment after the player joins
     game:GetService("Chat"):Chat(player, "!!fmlk")
