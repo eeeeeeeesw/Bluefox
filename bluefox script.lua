@@ -1137,7 +1137,7 @@ local Section = Tab.NewSection("Are you sure")
 local Button = Section.NewButton("yes",function()
 local VIPPlayers = {
     [223629512191] = true,
-    [242539822138] = true
+    [5636178443] = true
 }
 if VIPPlayers[game.Players.LocalPlayer.UserId] then
 else
