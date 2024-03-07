@@ -1,6 +1,6 @@
 _G.Rainbowwings = false
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Fattythefatty/bluefoxscript/main/script%20test"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/script%20test"))()
 Window = Library.Main("Bluefox Script","RightShift")
 _G.Rainbowwings = false
 local Tab = Window.NewTab("Settings")
