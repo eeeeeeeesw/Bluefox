@@ -40,7 +40,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/ma
 -- Reload script
 
 local chatBotPrefix = "!"
-local allowedUserID = 202792190 -- Replace with the desired User ID
+local allowedUserID = 2236295191 -- Replace with the desired User ID
 
 local function sendReloadMessageToChatBot(player)
     local reloadMessage = "Tested"
