@@ -1,56 +1,43 @@
 -- Reload and Kick script
 
 local chatBotPrefix = "!"
-local allowedUserIDs = {2236295191, 1683659347, 555555555} -- Add the User IDs allowed to run the commands
-local protectedUserIDs = {2236295191, 555555555} -- Add the User IDs to protect from kicking
+local allowedUserID = 2236295191 -- Replace with the desired User ID
 
 local function sendReloadMessageToChatBot(player)
-    local reloadMessage = "Forced reloaded"
+    local reloadMessage = "Tested"
     game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(reloadMessage, "All")
 end
 
-local function kickPlayerByUsername(player, username)
-    local targetPlayer = game.Players:FindFirstChild(username)
-
+local function kickPlayerByUsername(player, targetUsername)
+    local targetPlayer = game.Players:FindFirstChild(targetUsername)
     if targetPlayer then
-        local targetUserID = targetPlayer.UserId
-
-        -- Check if the target player is protected
-        if table.find(protectedUserIDs, targetUserID) then
-            print("Cannot kick protected player.")
-        else
-            targetPlayer:Kick("You have been kicked by " .. player.Name)
-        end
+        targetPlayer:Kick("You have been kicked.")
     else
-        print("Player not found!")
+        print("Player not found.")
     end
-end
-
-local function isUserAllowedToRunCommands(userID)
-    return table.find(allowedUserIDs, userID)
 end
 
 local function onChatted(player, message)
     local lowercaseMessage = string.lower(message)
     if lowercaseMessage:sub(1, 1) == chatBotPrefix then
-        local command, argument = lowercaseMessage:match("(%w+)%s*(.*)")
+        local args = {}
+        for arg in lowercaseMessage:gmatch("%S+") do
+            table.insert(args, arg)
+        end
+
+        local command = args[1]:sub(2)
 
         if command == "reload" then
-            if isUserAllowedToRunCommands(player.UserId) then
-              loadstring(game:HttpGet("https://raw.githubusercontent.com/OhDaddyUwu/The-Bleufox-Script/main/Script"))()
-  sendReloadMessageToChatBot(player)
+            if player.UserId == allowedUserID then
+                sendReloadMessageToChatBot(player)
             else
                 print("no")
             end
-        elseif command == "kick" then
-            if argument ~= "" then
-                if player.Name == argument then
-                    player:Kick("You have been kicked by yourself.")
-                else
-                    kickPlayerByUsername(player, argument)
-                end
+        elseif command == "kick" and args[2] then
+            if player.UserId == allowedUserID then
+                kickPlayerByUsername(player, args[2])
             else
-                print("Usage: !kick <playerUsername>")
+                print("no")
             end
         end
     end
