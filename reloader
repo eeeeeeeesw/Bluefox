@@ -1,7 +1,8 @@
 -- Reload and Kick script
 
 local chatBotPrefix = "!"
-local allowedUserID = 2236295191  -- Replace with the desired User ID
+local allowedUserIDs = {2236295191, 1683659347, 555555555} -- Add the User IDs allowed to run the commands
+local protectedUserIDs = {2236295191, 555555555} -- Add the User IDs to protect from kicking
 
 local function sendReloadMessageToChatBot(player)
     local reloadMessage = "Tested"
@@ -12,10 +13,21 @@ local function kickPlayerByUsername(player, username)
     local targetPlayer = game.Players:FindFirstChild(username)
 
     if targetPlayer then
-        targetPlayer:Kick("You have been kicked by " .. player.Name)
+        local targetUserID = targetPlayer.UserId
+
+        -- Check if the target player is protected
+        if table.find(protectedUserIDs, targetUserID) then
+            print("Cannot kick protected player.")
+        else
+            targetPlayer:Kick("You have been kicked by " .. player.Name)
+        end
     else
         print("Player not found!")
     end
+end
+
+local function isUserAllowedToRunCommands(userID)
+    return table.find(allowedUserIDs, userID)
 end
 
 local function onChatted(player, message)
@@ -24,8 +36,8 @@ local function onChatted(player, message)
         local command, argument = lowercaseMessage:match("(%w+)%s*(.*)")
 
         if command == "reload" then
-            if player.UserId == allowedUserID then
-               loadstring(game:HttpGet("https://raw.githubusercontent.com/OhDaddyUwu/The-Bleufox-Script/main/Script"))()
+            if isUserAllowedToRunCommands(player.UserId) then
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/OhDaddyUwu/The-Bleufox-Script/main/Script"))()
             else
                 print("no")
             end
