@@ -20,8 +20,11 @@ local function onChatted(player, message)
 
         if command == "reload" then
             if player.UserId == allowedUserID then
-                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Reloaded to 1.12.2", "All")
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/OhDaddyUwu/The-Bleufox-Script/main/Script"))()
+                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh God Daddy UwU", "All")
+ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh Yes Daddy Harder OwO", "All")
+ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Ah Thats The Spot Daddy", "All")
+ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("deeper Please Daddy", "All")
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/bluefox%20script.lua"))()
             else
                 print("Access denied.")
             end
