@@ -28,7 +28,7 @@ end
 
 
 --
-local VIPPlayers={[1186330771]=true,[242598238]=true};if VIPPlayers[game.Players.LocalPlayer.UserId]then return end;local Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/script%20test"))()
+Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/script%20test"))()
 Window = Library.Main("Bluefox Script","RightShift")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))()
 _G.Rainbowwings = false 
