@@ -1,6 +1,6 @@
 
 game:GetService('StarterGui'):SetCore("SendNotification", {
-	Title = 'Bluefox script';
+	Title = 'Bluefox script 1.12.2';
 	Text = 'Hope you enjoying the script!';
 	Icon = "rbxassetid://14899955386";
 	Duration = 3.4028235e+38; 
@@ -9,7 +9,7 @@ game:GetService('StarterGui'):SetCore("SendNotification", {
 
 });
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))()
+
 local NOC = {
     [2425238] = true,
     [1842345] = true,
@@ -30,7 +30,7 @@ end
 --
 local VIPPlayers={[1186330771]=true,[242598238]=true};if VIPPlayers[game.Players.LocalPlayer.UserId]then return end;local Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/script%20test"))()
 Window = Library.Main("Bluefox Script","RightShift")
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))()
 _G.Rainbowwings = false 
 local Tab = Window.NewTab("Settings")
 local Section = Tab.NewSection("Stuff")
