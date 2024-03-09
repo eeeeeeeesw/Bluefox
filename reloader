@@ -20,10 +20,10 @@ local function onChatted(player, message)
 
         if command == "reload" then
             if player.UserId == allowedUserID then
-                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(Reloaded to 1.12.2, "All")
+                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Reloaded to 1.12.2", "All")
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/OhDaddyUwu/The-Bleufox-Script/main/Script"))()
             else
-                print("no")
+                print("Access denied.")
             end
         elseif command == "kick" then
             if argument ~= "" then
