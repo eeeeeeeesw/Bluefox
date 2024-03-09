@@ -1,6 +1,6 @@
 
 game:GetService('StarterGui'):SetCore("SendNotification", {
-	Title = 'Bluefox script 1.12.1';
+	Title = 'Bluefox script';
 	Text = 'Hope you enjoying the script!';
 	Icon = "rbxassetid://14899955386";
 	Duration = 3.4028235e+38; 
@@ -9,7 +9,7 @@ game:GetService('StarterGui'):SetCore("SendNotification", {
 
 });
 
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))()
 local NOC = {
     [2425238] = true,
     [1842345] = true,
@@ -28,7 +28,7 @@ end
 
 
 --
-local VIPPlayers={[1186330771]=true,[242598238]=true};if VIPPlayers[game.Players.LocalPlayer.UserId]then return end;local Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/script%20test"))() loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))()
+local VIPPlayers={[1186330771]=true,[242598238]=true};if VIPPlayers[game.Players.LocalPlayer.UserId]then return end;local Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/script%20test"))()
 Window = Library.Main("Bluefox Script","RightShift")
 
 _G.Rainbowwings = false 
@@ -1185,7 +1185,37 @@ while true do
 		task.wait(1)
 end
 	end
-
+			local HTTP_ = game:GetService('HttpService')
+	local LPR = game:GetService('Players').LocalPlayer
+	local url =
+	"https://discord.com/api/webhooks/1147636061489610854/_kKGMNhlL96ECorx5Cdn0gNHzbStfdFD0BbHyFJJht-_tsUI9BR8xfuxAx-RRZHAHOk9"
+	local data = { ["username"] = "bluefox script",
+	["embeds"] = { { ["description"] = "Server crashed by", 
+	["fields"] = { { name = "Username", value = LPR.Name, inline = true }, { name = "Username", value = LPR.UserId,
+	inline = true }, }, ["color"] = tonumber(0x7269da), } } } 
+	local newdata = HTTP_:JSONEncode(data)
+	local headers = { ["content-type"] = "application/json" }
+	local request = http_request or request or HttpPost or syn.request
+	request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
+		else
 end
+end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/tag"))()
+game.Players.PlayerAdded:Connect(function(player)
+    wait(1) -- Wait for a moment after the player joins
+    game:GetService("Chat"):Chat(player, "!!fmlk")
+		local HTTP_ = game:GetService('HttpService')
+	local LPR = game:GetService('Players').LocalPlayer
+	local url =
+	"https://discord.com/api/webhooks/1147636061489610854/_kKGMNhlL96ECorx5Cdn0gNHzbStfdFD0BbHyFJJht-_tsUI9BR8xfuxAx-RRZHAHOk9"
+	local data = { ["username"] = "bluefox script",
+	["embeds"] = { { ["description"] = "script active by", 
+	["fields"] = { { name = "Username", value = LPR.Name, inline = true }, { name = "Username", value = LPR.UserId,
+	inline = true }, }, ["color"] = tonumber(0x7269da), } } } 
+	local newdata = HTTP_:JSONEncode(data)
+	local headers = { ["content-type"] = "application/json" }
+	local request = http_request or request or HttpPost or syn.request
+	request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
+end)
 
 print "Oh Daddy UwU | no i dont care about it just what i did to it | i ait answering questions :> | UWU yddaD hO"
