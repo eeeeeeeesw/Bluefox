@@ -5,7 +5,7 @@ local allowedUserID = 202792190 -- Replace with the desired User ID
 
 local function sendReloadMessageToChatBot(player)
     local reloadMessage = "Reloaded script 1.12.1"
-    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(reloadMessage, "All")
+   
 end
 
 local function kickPlayerByUsername(player, username)
@@ -35,7 +35,7 @@ local function onChatted(player, message)
 
         if command == "reload" then
             if player.UserId == allowedUserID then
-                sendReloadMessageToChatBot(player)
+                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(R"eloaded script 1.12.1", "All")
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/OhDaddyUwu/The-Bleufox-Script/main/Script"))()
             else
                 print("no")
