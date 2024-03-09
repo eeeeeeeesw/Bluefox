@@ -1,6 +1,6 @@
 
 game:GetService('StarterGui'):SetCore("SendNotification", {
-	Title = 'Bluefox script';
+	Title = 'Bluefox script 1.12.1';
 	Text = 'Hope you enjoying the script!';
 	Icon = "rbxassetid://14899955386";
 	Duration = 3.4028235e+38; 
