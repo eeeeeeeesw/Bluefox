@@ -1,28 +1,13 @@
--- Reload, Kick, and Message script
+-- Reload and Kick script
 
 local chatBotPrefix = "!"
-local allowedUserID = 202792190 -- Replace with the desired User ID
-
-local function sendReloadMessageToChatBot(player)
-    local reloadMessage = "Reloaded script 1.12.1"
-   
-end
+local allowedUserID = 2236295191 -- Replace with the desired User ID
 
 local function kickPlayerByUsername(player, username)
     local targetPlayer = game.Players:FindFirstChild(username)
 
     if targetPlayer then
         targetPlayer:Kick("You have been kicked by " .. player.Name)
-    else
-        print("Player not found!")
-    end
-end
-
-local function sendMessageToPlayer(player, targetUsername, message)
-    local targetPlayer = game.Players:FindFirstChild(targetUsername)
-
-    if targetPlayer then
-        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, targetPlayer.Name)
     else
         print("Player not found!")
     end
@@ -35,7 +20,7 @@ local function onChatted(player, message)
 
         if command == "reload" then
             if player.UserId == allowedUserID then
-                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(R"eloaded script 1.12.1", "All")
+                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(Reloaded to 1.12.2, "All")
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/OhDaddyUwu/The-Bleufox-Script/main/Script"))()
             else
                 print("no")
@@ -49,13 +34,6 @@ local function onChatted(player, message)
                 end
             else
                 print("Usage: !kick <playerUsername>")
-            end
-        elseif command == "msg" then
-            local targetUser, userMessage = argument:match("(%w+)%s*(.*)")
-            if targetUser ~= "" and userMessage ~= "" then
-                sendMessageToPlayer(player, targetUser, userMessage)
-            else
-                print("Usage: !msg <targetUsername> <message>")
             end
         end
     end
