@@ -483,6 +483,8 @@ local A_1 = "HairF"
 local A_2 = "Scene"
 local Event = game:GetService("ReplicatedStorage").Accessories
 Event:FireServer(A_1, A_2)
+		local args = {[1] = "Accessories",[2] = 0,255,255}
+		mk1:FireServer(unpack(args))
 for _,v in next,game.Players.LocalPlayer.Character:children()do
 	if v:IsA'BasePart'and v.Name~='HumanoidRootPart'then
 		game.ReplicatedStorage.MasterKey:FireServer("Fluff", v.Name, 0)
