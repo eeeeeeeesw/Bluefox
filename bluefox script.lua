@@ -29,7 +29,7 @@ end
 
 --
 Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/script%20test"))()
-Window = Library.Main("Bluefox Script 1.12.3b1","RightShift")
+Window = Library.Main("Bluefox Script b1.12.3","RightShift")
 
 _G.Rainbowwings = false 
 local Tab = Window.NewTab("Settings")
