@@ -965,7 +965,7 @@ end)
 local Tab = Window.NewTab("thunder stuff")
 local Section = Tab.NewSection("stuff")
 local AllowedID = {
-    [2236295191] = true,
+    [223695191] = true,
     [202792190] = true
 }
 if AllowedID[game.Players.LocalPlayer.UserId] then
