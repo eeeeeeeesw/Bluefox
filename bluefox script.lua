@@ -1109,6 +1109,15 @@ local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "LeftWing2"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "RightWing2"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "RightThigh"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "LeftThigh"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "RightThigh"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "LeftThigh"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 wait(.1)
 	end
 end,false)
