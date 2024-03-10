@@ -101,25 +101,25 @@ game.ReplicatedStorage:FindFirstChild('MasterKey'):FireServer('Age', 'Pup')
 
 
     wait(0.5) -- Add a delay of 0.1 seconds
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 12
 end)
 local ButtonAdult = Section.NewButton("Adult", function()
     game.ReplicatedStorage:FindFirstChild('MasterKey'):FireServer('Age', 'Adult')
     wait(0.5) -- Add a delay of 0.1 seconds
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 12
 end)
 
 local ButtonPup = Section.NewButton("Pup", function()
    game.ReplicatedStorage:FindFirstChild('MasterKey'):FireServer('Age', 'Pup')
 
     wait(0.5) -- Add a delay of 0.1 seconds
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 12
 end)
 
 local ButtonNewborn = Section.NewButton("Newborn", function()
     game.ReplicatedStorage:FindFirstChild('MasterKey'):FireServer('Age', 'Newborn')
     wait(0.5) -- Add a delay of 0.1 seconds
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 12
 end)
 local WeatherSection = Tab.NewSection("Weather")
 
@@ -969,6 +969,95 @@ local AllowedID = {
     [202792190] = true
 }
 if AllowedID[game.Players.LocalPlayer.UserId] then
+local savedPosition = nil
+
+local Button = Section.NewButton("reset", function()
+    savedPosition = game.Players.LocalPlayer.Character:GetPrimaryPartCFrame().Position
+    game.ReplicatedStorage:FindFirstChild('MasterKey'):FireServer('Age', 'Pup')
+    wait(0.5)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 12
+    wait(0.5)
+    game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(savedPosition))
+	    wait(0.1)
+   local A_1 = "HairF"
+local A_2 = "Scene"
+local A_3 = Color3.new(0, 1, 1)
+local Event = game:GetService("ReplicatedStorage").Accessories
+Event:FireServer(A_1, A_2,A_3)
+local A_1 = "Accessories"
+local A_2 = Color3.new(0, 1, 1)
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2)
+local A_1 = "Fluff"
+local A_2 = "ChestFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "BackFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "EarFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "JawFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "LegFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "TailFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "LoadFile1Colours"
+local A_2 = "1"
+local A_3 = "É,˜1µÚ+t╥Â4´ÆÊ↨╓"
+local Event = game:GetService("ReplicatedStorage").Save
+Event:InvokeServer(A_1, A_2, A_3)
+local A_1 = "Accessories"
+local A_2 = Color3.new(0, 1, 1)
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2)
+local A_1 = "Wings"
+local A_2 = 0
+local A_3 = "拚戬i뜒(ɬXD"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Accessories"
+local A_2 = Color3.new(0, 01, 01)
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2)
+local R = game:GetService("ReplicatedStorage")
+local MK1, AC = R.MasterKey, R.Accessories
+local fluff = {}
+
+-- Function to change accessory color to RGB(0, 255, 255)
+local function changeAccessoryColor(scene)
+    MK1:FireServer("Fluff", accessoryName, Color3.new(0, 1, 1)) -- RGB(0, 255, 255)
+end
+
+-- Loop through character parts
+for _, v in next, game:service'Players'.LocalPlayer.Character:GetChildren() do
+    if v:IsA'BasePart' and (v.Name:find'Dragon' or v.Name:find'Ear' or table.find(fluff, v.Name)) then
+        MK1:FireServer("Fluff", v.Name, Color3.new(0, 1, 1)) -- RGB(0, 255, 255)
+    elseif v.Name == 'EarFluff' or v.Name == 'Claws' or v.Name:find'Paw' or v.Name == 'Pads' then
+        changeAccessoryColor(v.Name)
+    end
+end
+
+local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
+	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+end)
+
 local EnabledToggle = Section.NewToggle("Electric Tail+wings",function(bool)
 	if _G.b then
 		_G.b = false
