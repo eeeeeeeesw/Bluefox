@@ -480,7 +480,7 @@ local Button = Section.NewButton("Full Bark",function()
 end)
 local Button = Section.NewButton("UnGhost",function()
 local A_1 = "HairF"
-local A_2 = "Spiky"
+local A_2 = "Scene"
 local Event = game:GetService("ReplicatedStorage").Accessories
 Event:FireServer(A_1, A_2)
 for _,v in next,game.Players.LocalPlayer.Character:children()do
