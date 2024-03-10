@@ -978,6 +978,7 @@ for _,v in next,game:service'Players'.LocalPlayer.Character:children()do
     end
 end
 local HairC = {0,255,255}
+local MK1, AC = R.MasterKey, R.Accessories
 while _G.rbwhair do
 		task.wait()
 		local args = {[1] = "Accessories",[2] = HairC}
