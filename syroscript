@@ -915,8 +915,9 @@ end)
 local Button = Section.NewButton("Make Charictar 2",function()
 local A_1 = "HairF"
 local A_2 = "Scene"
+local A_3 = Color3.new(0, 255, 255)
 local Event = game:GetService("ReplicatedStorage").Accessories
-Event:FireServer(A_1, A_2)
+Event:FireServer(A_1, A_2,A_3)
 local A_1 = "Fluff"
 local A_2 = "ChestFluff"
 local A_3 = 0
