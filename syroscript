@@ -956,7 +956,7 @@ local A_3 = "É,˜1µÚ+t╥Â4´ÆÊ↨╓"
 local Event = game:GetService("ReplicatedStorage").Save
 Event:InvokeServer(A_1, A_2, A_3)
 local A_1 = "Accessories"
-local A_2 = Color3.new(0, 255, 255)
+local A_2 = Color3.new(0, 1, 1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2)
 local A_1 = "Wings"
