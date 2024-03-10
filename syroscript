@@ -1667,7 +1667,7 @@ local Section = Tab.NewSection("Are you sure?")
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/bluefox%20script.lua"))()
 	end)
 	local Button = Section.NewButton("reload",function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/syroscript.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/syroscript"))()
 	end)
 local maintoggle = Instance.new("TextButton")
 
