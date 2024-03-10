@@ -914,7 +914,7 @@ Event:FireServer(A_1, A_2, A_3)
 end) 
 local Button = Section.NewButton("Make Charictar 2",function()
 local A_1 = "HairF"
-local A_2 = "Spiky"
+local A_2 = "Scene"
 local Event = game:GetService("ReplicatedStorage").Accessories
 Event:FireServer(A_1, A_2)
 local A_1 = "Fluff"
@@ -953,15 +953,10 @@ local A_3 = "É,˜1µÚ+t╥Â4´ÆÊ↨╓"
 local Event = game:GetService("ReplicatedStorage").Save
 Event:InvokeServer(A_1, A_2, A_3)
 local A_1 = "Accessories"
-local A_2 = Color3.new(0, 0, 0)
+local A_2 = Color3.new(0, 255, 255)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2)
 local A_1 = "Wings"
-local A_2 = 0
-local A_3 = "拚戬i뜒(ɬXD"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "Dragon"
 local A_2 = 0
 local A_3 = "拚戬i뜒(ɬXD"
 local Event = game:GetService("ReplicatedStorage").MasterKey
@@ -1009,23 +1004,23 @@ local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 while _G.Cop do
 local A_1 = "RightEar"
-local A_2 = Color3.new(0, 0, 900)
+local A_2 = Color3.new(0, 0, 255)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftEar"
-local A_2 = Color3.new(900, 0, 0)
+local A_2 = Color3.new(255, 0, 0)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 wait(.5)
 local A_1 = "RightEar"
-local A_2 = Color3.new(900, 0, 0)
+local A_2 = Color3.new(255, 0, 0)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftEar"
-local A_2 = Color3.new(0, 0, 900)
+local A_2 = Color3.new(0, 0, 255)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
