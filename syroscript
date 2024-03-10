@@ -620,7 +620,7 @@ local A_2 =
 	{
 		[1] = "Pupils"
 	}
-local A_3 = Color3.new(0, 0, 0)
+local A_3 = Color3.new(0,255 ,255)
 local A_4 = "Body"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3, A_4)
