@@ -969,6 +969,60 @@ local AllowedID = {
     [202792190] = true
 }
 if AllowedID[game.Players.LocalPlayer.UserId] then
+local EnabledToggle = Section.NewToggle("Electric Tail+wings",function(bool)
+	if _G.b then
+		_G.b = false
+		return
+	else
+		_G.b = true
+	end
+	while _G.b do
+		local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail1"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail1"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail2"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail2"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail3"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail3"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail5"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "ForceField",[3] = {[29] = "Tail5"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail6"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail6"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "LeftWing3"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "RightWing3"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "LeftWing3"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "RightWing3"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "LeftWing2"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "RightWing2"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "LeftWing2"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "RightWing2"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+	end
+end,false)
 local EnabledToggle = Section.NewToggle("Electric Tail",function(bool)
 	if _G.b then
 		_G.b = false
@@ -1103,6 +1157,8 @@ end
 local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 end) 
+else
+local Section = Tab.NewSection("opse looks like im a cunt and wont give u access to this :3")
 end
 local Tab = Window.NewTab("Info")
 local Section = Tab.NewSection(" ")
