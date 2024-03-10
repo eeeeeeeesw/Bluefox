@@ -1001,11 +1001,11 @@ local Button = Section.NewButton("Neon Toungue",function()
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))	
 end)
 local Tab = Window.NewTab("thunder stuff")
-local EnabledToggle = Section.NewToggle("Electric Tail",function(bool)
+local EnabledToggle = Section.NewToggle("neon show", function(bool)
 
 end)
-local Button = Section.NewButton("Make Charictar 2",function()
 
+local EnabledToggle = Section.NewToggle("Load oc!", function(bool)
 end)
 local Tab = Window.NewTab("Info")
 local Section = Tab.NewSection(" ")
