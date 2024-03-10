@@ -797,7 +797,7 @@ local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail6"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "LeftArm"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
-wait(.1)
+wait(.15)
 local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "LeftArm"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "RightArm"}}
