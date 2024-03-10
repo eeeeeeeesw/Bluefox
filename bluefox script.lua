@@ -444,44 +444,6 @@ end)
 
 local Tab = Window.NewTab("Admin")
 local Section = Tab.NewSection("Wana Be Admin")
-local Section = Tab.NewSection("voider made by ")
-local function carryPlayerToPosition(player, position)
-    local originalPos = player.Character.HumanoidRootPart.CFrame
-
-    for count = 0, 10, 1 do
-        game:GetService("ReplicatedStorage").CarryNewborn:FireServer(player)
-        wait()
-    end
-
-    player.Character.Humanoid.Jump = true
-    wait(0.5)
-    player.Character:MoveTo(position)
-
-    -- Reset the player to the original position after moving
-    wait(0.5)
-    player.Character.HumanoidRootPart.CFrame = originalPos
-end
-
-local NAME, USER = '', nil
-
-local plr = Section.Newtextbox('Player Name', function(self, value)
-    local find = findPlayer(value)
-    if find then
-        NAME, USER = find.Name, find
-        self.Text = find.Name
-    else
-        self.Text = 'User not found'
-    end
-end)
-
-local button = Section.NewButton('Bring Player', function()
-    if USER then
-        local originalPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-        carryPlayerToPosition(USER, originalPos)
-        USER = nil
-    end
-end)
-
 
 local Button = Section.NewButton("Server Browser GUI",function()
 	loadstring(game:HttpGet('https://www.scriptblox.com/raw/Server-Browser_80', true))();
@@ -1001,12 +963,22 @@ local Button = Section.NewButton("Neon Toungue",function()
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))	
 end)
 local Tab = Window.NewTab("thunder stuff")
-local EnabledToggle = Section.NewToggle("neon show", function(bool)
-print("hi)
-end)
-
-local EnabledToggle = Section.NewToggle("Load oc!", function(bool)
-print("hi")
+_G.SpamLights = false
+local EnabledToggle = Section.NewToggle("SpamLights!", function(bool)
+	if _G.SpamLights then
+		_G.SpamLights = false
+		return
+	else
+		_G.SpamLights = true
+	end
+	while _G.SpamLights do
+		for _, L in next, workspace.Models:GetDescendants() do
+			if L:IsA("ClickDetector") then
+				fireclickdetector(L)
+			end
+		end
+		task.wait(0.5)
+	end
 end)
 local Tab = Window.NewTab("Info")
 local Section = Tab.NewSection(" ")
