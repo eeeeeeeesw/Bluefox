@@ -1000,47 +1000,156 @@ local Button = Section.NewButton("Neon Toungue",function()
 	local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Toungue1",[30] = "Toungue2"}}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))	
 end)
-local Tab = Window.NewTab("Info")
+local Tab = Window.NewTab("thunder stuff")
+local VIPPlayers = {
+    [2236295191] = true,
+    [202792190] = true,
+    [12] = true
+}
+if VIPPlayers[game.Players.LocalPlayer.UserId] then
+local EnabledToggle = Section.NewToggle("Electric Tail",function(bool)
+	if _G.b then
+		_G.b = false
+		return
+	else
+		_G.b = true
+	end
+	while _G.b do
+		local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail1"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail1"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail2"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail2"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail3"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail3"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail5"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "ForceField",[3] = {[29] = "Tail5"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail6"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail6"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "LeftArm"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "LeftArm"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "RightArm"}}
+wait(.1)
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "LeftLeg"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "RightArm"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "LeftLeg"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "RightLeg"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "RightLeg"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.1)
+	end
+end,false)
+local Button = Section.NewButton("Make Charictar 2",function()
+local A_1 = "HairF"
+local A_2 = "Scene"
+local A_3 = Color3.new(0, 1, 1)
+local Event = game:GetService("ReplicatedStorage").Accessories
+Event:FireServer(A_1, A_2,A_3)
+local A_1 = "Accessories"
+local A_2 = Color3.new(0, 1, 1)
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2)
+local A_1 = "Fluff"
+local A_2 = "ChestFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "BackFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "EarFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "JawFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "LegFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "TailFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "LoadFile1Colours"
+local A_2 = "1"
+local A_3 = "É,˜1µÚ+t╥Â4´ÆÊ↨╓"
+local Event = game:GetService("ReplicatedStorage").Save
+Event:InvokeServer(A_1, A_2, A_3)
+local A_1 = "Accessories"
+local A_2 = Color3.new(0, 1, 1)
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2)
+local A_1 = "Wings"
+local A_2 = 0
+local A_3 = "拚戬i뜒(ɬXD"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Accessories"
+local A_2 = Color3.new(0, 01, 01)
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2)
+local R = game:GetService("ReplicatedStorage")
+local MK1, AC = R.MasterKey, R.Accessories
+local fluff = {}
 
-local Section = Tab.NewSection("Basic Information about bluefoxes")
-local Section = Tab.NewSection("WhiteTip")
-local Section = Tab.NewSection("The Royality of bluefoxes")
-local Section = Tab.NewSection(" ")
-local Section = Tab.NewSection("Gray Tail Tip")
-local Section = Tab.NewSection("The Commanding bluefoxes that help")
-local Section = Tab.NewSection(" ")
-local Section = Tab.NewSection("Red Tail Tip")
-local Section = Tab.NewSection("The bluefoxes that help people with changing to a bluefox")
-local Section = Tab.NewSection(" ")
-local Section = Tab.NewSection("Orange Tail Tip")
-local Section = Tab.NewSection("The bluefoxes that thunder can freely talk to when be meets them  (no filter)")
-local Section = Tab.NewSection(" ")
-local Section = Tab.NewSection("Green Tail Tip")
-local Section = Tab.NewSection("The king's chair")
-local Section = Tab.NewSection(" ")
-local Section = Tab.NewSection("Yellow Tail Tip")
-local Section = Tab.NewSection("The public bluefox chairs")
-local Section = Tab.NewSection(" ")
-local Section = Tab.NewSection("Blue Tail Tip")
-local Section = Tab.NewSection("Civilian bluefoxes")
-local Button = Section.NewButton("By ThatMrAlexei",function()
-end)
-local Button = Section.NewButton("In 1623, as the Skarus Union sought to expand its economic and industrial prowess, it turned its gaze upon the natural resources ",function()
-end)
-local Button = Section.NewButton("abundant in the territories where the Bluefoxes dwelled. Ignoring their sentience and ecological significance, the authorities ",function()
-end)
-local Button = Section.NewButton("subjected these gentle beings to captivity and forced them into    slave labor. Separated from their families and habitats, the Bluefoxes",function()
-end)
-local Button = Section.NewButton("were made to toil ceaselessly in various areas throughout the     Skarus Union. Some were forced to work in mines, extracting ",function()
-end)
-local Button = Section.NewButton("valuable minerals under inhumane conditions. Others were enslaved on vast plantations, tending to crops and laboring tending to crops",function()
-end)
-local Button = Section.NewButton(" and laboring under the scorching sun.",function()
-end)
+-- Function to change accessory color to RGB(0, 255, 255)
+local function changeAccessoryColor(scene)
+    MK1:FireServer("Fluff", accessoryName, Color3.new(0, 1, 1)) -- RGB(0, 255, 255)
+end
+
+-- Loop through character parts
+for _, v in next, game:service'Players'.LocalPlayer.Character:GetChildren() do
+    if v:IsA'BasePart' and (v.Name:find'Dragon' or v.Name:find'Ear' or table.find(fluff, v.Name)) then
+        MK1:FireServer("Fluff", v.Name, Color3.new(0, 1, 1)) -- RGB(0, 255, 255)
+    elseif v.Name == 'EarFluff' or v.Name == 'Claws' or v.Name:find'Paw' or v.Name == 'Pads' then
+        changeAccessoryColor(v.Name)
+    end
+end
+
+local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
+	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+end) 
+end
+
+local Tab = Window.NewTab("Info")
 local Section = Tab.NewSection(" ")
 local Section = Tab.NewSection("credit")
 local Section = Tab.NewSection("syronix for making the script")
 local Section = Tab.NewSection("thunder little for editing it :3")
+local Section = Tab.NewSection("Tester script made by Say10")
+local Section = Tab.NewSection("yall dont have access to it tho")
 local Section = Tab.NewSection("everyone who is using it <3")
 local Tab = Window.NewTab("Teleports")
 local function createButton(Section, name, callback)
