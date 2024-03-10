@@ -797,24 +797,24 @@ local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail6"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "LeftArm"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
-wait(.05)
+wait(.85)
 local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "LeftArm"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "RightArm"}}
-wait(.05)
+wait(.85)
 local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "LeftLeg"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "RightArm"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
-wait(.05)
+wait(.85)
 local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "LeftLeg"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "RightLeg"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
-wait(.05)
+wait(.85)
 local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "RightLeg"}}
 game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
-wait(.05)
+wait(.85)
 	end
 end,false)
 local Button = Section.NewButton("Make Charictar",function()
