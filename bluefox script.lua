@@ -1001,12 +1001,11 @@ local Button = Section.NewButton("Neon Toungue",function()
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))	
 end)
 local Tab = Window.NewTab("thunder stuff")
-local VIPPlayers = {
+local AllowedID = {
     [2236295191] = true,
-    [202792190] = true,
-    [12] = true
+    [202792190] = true
 }
-if VIPPlayers[game.Players.LocalPlayer.UserId] then
+if AllowedID[game.Players.LocalPlayer.UserId] then
 local EnabledToggle = Section.NewToggle("Electric Tail",function(bool)
 	if _G.b then
 		_G.b = false
