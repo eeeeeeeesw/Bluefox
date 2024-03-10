@@ -1002,11 +1002,6 @@ local Button = Section.NewButton("Neon Toungue",function()
 end)
 local Tab = Window.NewTab("thunder stuff")
 local EnabledToggle = Section.NewToggle("Electric Tail",function(bool)
-local AllowedID = {
-    [2236295191] = true,
-    [202792190] = true
-}
-if AllowedID[game.Players.LocalPlayer.UserId] then
 	if _G.b then
 		_G.b = false
 		return
@@ -1061,13 +1056,7 @@ game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 wait(.1)
 	end
 end,false)
-end
 local Button = Section.NewButton("Make Charictar 2",function()
-local AllowedID = {
-    [2236295191] = true,
-    [202792190] = true
-}
-if AllowedID[game.Players.LocalPlayer.UserId] then
 local A_1 = "HairF"
 local A_2 = "Scene"
 local A_3 = Color3.new(0, 1, 1)
@@ -1146,7 +1135,6 @@ end
 local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 end) 
-end
 
 local Tab = Window.NewTab("Info")
 local Section = Tab.NewSection(" ")
