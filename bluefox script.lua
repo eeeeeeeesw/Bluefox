@@ -1002,10 +1002,11 @@ local Button = Section.NewButton("Neon Toungue",function()
 end)
 local Tab = Window.NewTab("thunder stuff")
 local EnabledToggle = Section.NewToggle("neon show", function(bool)
-
+print("hi)
 end)
 
 local EnabledToggle = Section.NewToggle("Load oc!", function(bool)
+print("hi")
 end)
 local Tab = Window.NewTab("Info")
 local Section = Tab.NewSection(" ")
