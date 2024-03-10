@@ -1003,10 +1003,10 @@ end)
 local Tab = Window.NewTab("thunder stuff")
 local EnabledToggle = Section.NewToggle("Electric Tail",function(bool)
 
-end
+end)
 local Button = Section.NewButton("Make Charictar 2",function()
 
-end
+end)
 local Tab = Window.NewTab("Info")
 local Section = Tab.NewSection(" ")
 local Section = Tab.NewSection("credit")
