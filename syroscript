@@ -977,6 +977,12 @@ for _,v in next,game:service'Players'.LocalPlayer.Character:children()do
         MK1:FireServer("Fluff", v.Name, 1)
     end
 end
+HairC = {0,255,255}
+while _G.rbwhair do
+		task.wait()
+		local args = {[1] = "Accessories",[2] = HairC}
+		mk1:FireServer(unpack(args))
+	end
 local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 end) 
