@@ -1056,6 +1056,7 @@ game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 wait(.1)
 	end
 end,false)
+end
 local Button = Section.NewButton("Make Charictar 2",function()
 local A_1 = "HairF"
 local A_2 = "Scene"
@@ -1135,7 +1136,7 @@ end
 local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 end) 
-
+end
 local Tab = Window.NewTab("Info")
 local Section = Tab.NewSection(" ")
 local Section = Tab.NewSection("credit")
