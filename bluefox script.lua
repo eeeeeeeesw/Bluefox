@@ -1225,6 +1225,9 @@ local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\14
 end) 
 elseif sayAllowedID[game.Players.LocalPlayer.UserId] then
 local Section = Tab.NewSection("Here u go say ^^")
+local Button = Section.NewButton("ur script",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/syroscript'))();
+		end)
 local Button = Section.NewButton("Make Character",function()
 local A_1 = "Material"
 local A_2 = "Neon"
