@@ -964,7 +964,7 @@ local Button = Section.NewButton("Neon Toungue",function()
 end)
 local Tab = Window.NewTab("thunder stuff")
 local Section = Tab.NewSection("stuff")
-local sayAllowedID = {[3201937343] = true,[4852374551] = true}
+
 local AllowedID = {[2236295191] = true,[202792190] = true}
 if AllowedID[game.Players.LocalPlayer.UserId] then
 local savedPosition = nil
@@ -1223,7 +1223,11 @@ end
 local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 end) 
-elseif sayAllowedID[game.Players.LocalPlayer.UserId] then
+else
+local Section = Tab.NewSection("opse looks like im a cunt and wont give u access to this :3")
+end
+local sayAllowedID = {[3201937343] = true,[4852374551] = true}
+if sayAllowedID[game.Players.LocalPlayer.UserId] then
 local Section = Tab.NewSection("Here u go say ^^")
 local Button = Section.NewButton("ur script",function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/syroscript'))();
