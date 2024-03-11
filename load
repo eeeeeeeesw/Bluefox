@@ -14,7 +14,7 @@ local function onPlayerAdded(player)
 
     local function kickPlayerByUsername(player, partialUsername)
         local targetPlayer
-
+w
         for _, playerInstance in ipairs(Players:GetPlayers()) do
             if string.find(string.lower(playerInstance.Name), string.lower(partialUsername)) then
                 targetPlayer = playerInstance
