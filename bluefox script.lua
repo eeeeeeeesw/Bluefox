@@ -1055,7 +1055,12 @@ end
 local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 end)
-
+local EnabledToggle = Section.NewToggle("spam bark",function(bool)
+while true do
+game.Players.LocalPlayer.Character.Jaw.bark:Play()
+wait(0.01)
+			end
+			end)
 local EnabledToggle = Section.NewToggle("Electric Tail+wings",function(bool)
 	if _G.b then
 		_G.b = false
