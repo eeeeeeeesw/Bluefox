@@ -964,10 +964,8 @@ local Button = Section.NewButton("Neon Toungue",function()
 end)
 local Tab = Window.NewTab("thunder stuff")
 local Section = Tab.NewSection("stuff")
-local AllowedID = {
-    [2236295191] = true,
-    [202792190] = true
-}
+local sayAllowedID = {[3201937343] = true,[4852374551] = true}
+local AllowedID = {[2236295191] = true,[202792190] = true}
 if AllowedID[game.Players.LocalPlayer.UserId] then
 local savedPosition = nil
 
@@ -1146,7 +1144,7 @@ wait(.1)
 	end
 end,false)
 
-local Button = Section.NewButton("Make Charictar 2",function()
+local Button = Section.NewButton("Make oc",function()
 local A_1 = "HairF"
 local A_2 = "Scene"
 local A_3 = Color3.new(0, 1, 1)
@@ -1225,6 +1223,138 @@ end
 local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 end) 
+elseif sayAllowedID[game.Players.LocalPlayer.UserId] then
+local Section = Tab.NewSection("Here u go say ^^")
+local Button = Section.NewButton("Make Character",function()
+local A_1 = "Material"
+local A_2 = "Neon"
+local A_3 = 
+{
+	[1] = "EyeColor", 
+}
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "HairF"
+local A_2 = "Spiky"
+local Event = game:GetService("ReplicatedStorage").Accessories
+Event:FireServer(A_1, A_2)
+local A_1 = "Fluff"
+local A_2 = "ChestFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "BackFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "EarFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "JawFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "LegFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Fluff"
+local A_2 = "TailFluff"
+local A_3 = 0
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "LoadFile1Colours"
+local A_2 = "2"
+local A_3 = "É,˜1µÚ+t╥Â4´ÆÊ↨╓"
+local Event = game:GetService("ReplicatedStorage").Save
+Event:InvokeServer(A_1, A_2, A_3)
+local A_1 = "Accessories"
+local A_2 = Color3.new(1, 1, 1)
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2)
+local A_1 = "Wings"
+local A_2 = 0
+local A_3 = "拚戬i뜒(ɬXD"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "Dragon"
+local A_2 = 0
+local A_3 = "拚戬i뜒(ɬXD"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local R = game:GetService("ReplicatedStorage")
+local MK1, AC = R.MasterKey, R.Accessories
+local fluff = {}
+for _,v in next,game:service'Players'.LocalPlayer.Character:children()do
+    if v:IsA'BasePart'and (v.Name:find'Dragon'or v.Name:find'Ear'or table.find(fluff,v.Name))then
+        MK1:FireServer("Fluff", v.Name, 0) --   |  1 - invisible  |  0 - visible  | 
+    elseif v.Name=='EarFluff'or v.Name=='Claws'or v.Name:find'Paw'or v.Name=='Pads' then
+        MK1:FireServer('Fluff', v.Name, 1)
+    end
+end
+local R = game:GetService("ReplicatedStorage")
+local MK1, AC = R.MasterKey, R.Accessories
+for _,v in next,game:service'Players'.LocalPlayer.Character:children()do
+    if v:IsA'BasePart'and (v.Name=='EarFluff'or v.Name=='Claws'or v.Name:find'Paw'or v.Name=='Pads')then
+        MK1:FireServer("Fluff", v.Name, 1)
+    end
+end
+local A_1 = "PiercingsF"
+local A_2 = "Septum"
+local Event = game:GetService("ReplicatedStorage").Accessories
+Event:FireServer(A_1, A_2)
+local A_1 = "Accessories"
+local A_2 = Color3.new(0.960784, 0.529412, 0.141176)
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2)
+local A_1 = "AccessoryMaterial"
+local A_2 = "Neon"
+local A_3 = "PiercingsF"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+end) 
+_G.b = false
+local EnabledToggle = Section.NewToggle("Electric Tail",function(bool)
+	if _G.b then
+		_G.b = false
+		return
+	else
+		_G.b = true
+	end
+	while _G.b do
+		local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail1"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.5)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail1"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail2"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.5)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail2"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail3"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.5)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail3"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail5"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.5)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail5"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+local args = {[1] = "Material",[2] = "Neon",[3] = {[29] = "Tail6"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.5)
+local args = {[1] = "Material",[2] = "Concrete",[3] = {[29] = "Tail6"}}
+game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+wait(.5)
+	end
+end,false)
 else
 local Section = Tab.NewSection("opse looks like im a cunt and wont give u access to this :3")
 end
