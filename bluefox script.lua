@@ -465,12 +465,12 @@ if VIPPlayers[game.Players.LocalPlayer.UserId] then
 local Button = Section.NewButton("Spy chat",function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/spy%20script'))()
 end)
-	local Button = Section.NewButton("Strong Admin (broken)",function()
+
+end
+	local Button = Section.NewButton("Strong Admin (fixed)",function()
 _G.CustomUI = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua'),true))()
 end)
-end
-
 local Button = Section.NewButton("Chat Logger",function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Syr0nix/Chatlogger/main/e'))()
 end)
