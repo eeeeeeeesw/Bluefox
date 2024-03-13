@@ -6,7 +6,7 @@ local allowedUserID = {4852374551,3201937343,2236295191,202792190}
 local function sendReloadMessageToChatBot(player)
     local reloadMessage = "Hey! I'm A Bluefox :D"
     Storage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(reloadMessage, "All")
-end
+
 
 -- Function to handle when a new player joins
 local function onPlayerAdded(player)
