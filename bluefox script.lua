@@ -1,6 +1,6 @@
 
 game:GetService('StarterGui'):SetCore("SendNotification", {
-	Title = 'Bluefox script 1.12.3';
+	Title = 'Bluefox script 1.12.31';
 	Text = 'Hope you enjoying the script!';
 	Icon = "rbxassetid://14899955386";
 	Duration = 3.4028235e+38; 
@@ -29,7 +29,7 @@ end
 
 --
 Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/script%20test"))()
-Window = Library.Main("Bluefox Script 1.12.3","RightShift")
+Window = Library.Main("Bluefox Script 1.12.31","RightShift")
 
 _G.Rainbowwings = false 
 local Tab = Window.NewTab("Settings")
