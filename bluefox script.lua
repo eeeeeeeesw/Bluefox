@@ -1521,30 +1521,3 @@ while true do
 		task.wait(1)
 end
 	end
-local Tab = Window.NewTab("test")
-						local Section = Tab.NewSection("feature testings")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))();
