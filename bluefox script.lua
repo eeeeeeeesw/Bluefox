@@ -1521,16 +1521,9 @@ while true do
 		task.wait(1)
 end
 	end
-			local testings = {
-    [2236295191] = true,
-    [202792190] = true,
-}
 local Tab = Window.NewTab("test")
 						local Section = Tab.NewSection("feature testings")
 
-if testings[game.Players.LocalPlayer.UserId] then
-
-end
 
 
 
