@@ -1455,3 +1455,74 @@ createButton("VIW Den Forest 2", 519.791199, 48.2600021, -47.4920311, 0.60065746
 createButton("VIW Den Redwood", 532.389893, 87.6499786, 476.836426, -0.24057126, 0.97063148, -0.97063148)
 createButton("VIW Den Redwood 2", 557.94342, 64.1299896, 619.453613, 0.996085644, -0.0883934423, 0.0883934423)
 createButton("VIW Den Redwood 3", 266.536804, 45.2700043, 574.910095, -0.373445153, 0.927652299, -0.927652299)
+local tab = windoww.NewTab("testings")
+local Section = Tab.NewSection("feature testing")
+local hairfTextBox = Section.NewTextBox('HairF', function(self, value)
+    hairfValue = value
+end)
+
+local torsofTextBox = Section.NewTextBox('TorsoF', function(self, value)
+    torsofValue = value
+end)
+
+local feetfTextBox = Section.NewTextBox('FeetF', function(self, value)
+    feetfValue = value
+end)
+
+local rgbColorTextBox = Section.NewTextBox('RGB Color', function(self, value)
+    local r, g, b = value:match("(%d+),(%d+),(%d+)")
+    if r and g and b then
+        rgbColor = Color3.fromRGB(tonumber(r), tonumber(g), tonumber(b))
+    else
+        print("Invalid RGB format")
+    end
+end)
+
+local allFluffToggle = Section.NewToggle('All Fluff', function(bool)
+    allFluffEnabled = bool
+end)
+
+local dragonToggle = Section.NewToggle('Dragon', function(bool)
+    dragonEnabled = bool
+end)
+
+local wingsToggle = Section.NewToggle('Wings', function(bool)
+    wingsEnabled = bool
+end)
+
+local oceanToggle = Section.NewToggle('Ocean', function(bool)
+    oceanEnabled = bool
+end)
+
+local function saveSettingsToFile()
+    local fileName = "settings.txt"
+    local file = io.open(fileName, "w")
+    
+    if file then
+        file:write("HairF: " .. hairfValue .. "\n")
+        file:write("TorsoF: " .. torsofValue .. "\n")
+        file:write("FeetF: " .. feetfValue .. "\n")
+        file:write("RGB Color: " .. rgbColor.r .. "," .. rgbColor.g .. "," .. rgbColor.b .. "\n")
+        file:write("All Fluff: " .. tostring(allFluffEnabled) .. "\n")
+        file:write("Dragon: " .. tostring(dragonEnabled) .. "\n")
+        file:write("Wings: " .. tostring(wingsEnabled) .. "\n")
+        file:write("Ocean: " .. tostring(oceanEnabled) .. "\n")
+        
+        file:close()
+        print("Settings saved to " .. fileName)
+    else
+        print("Error: Unable to open file for writing")
+    end
+end
+
+local saveButton1 = Section.NewButton("Save 1", function()
+    saveSettingsToFile()
+end)
+
+local saveButton2 = Section.NewButton("Save 2", function()
+    saveSettingsToFile()
+end)
+
+local saveButton3 = Section.NewButton("Save 3", function()
+    saveSettingsToFile()
+end)
