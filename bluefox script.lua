@@ -1,18 +1,4 @@
-local banned = {
-    [2425238] = true,
-    [1842345] = true,
-    [12] = true
-}
-if banned[game.Players.LocalPlayer.UserId] then
-game:GetService('StarterGui'):SetCore("SendNotification", {
-	Title = 'Bluefox script 1.12.31';
-	Text = 'You have been banned from the script!';
-	Icon = "rbxassetid://14899955386";
-	Duration = 3.4028235e+38; 
-	Callback = b; 
-	Button1 = 'Close';
 
-		else
 			game:GetService('StarterGui'):SetCore("SendNotification", {
 	Title = 'Bluefox script 1.12.31';
 	Text = 'Hope you enjoying the script!';
@@ -22,8 +8,6 @@ game:GetService('StarterGui'):SetCore("SendNotification", {
 	Button1 = 'Close';
 
 });
-Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/script%20test"))()
-end
 local NOC = {
     [2425238] = true,
     [1842345] = true,
