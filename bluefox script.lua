@@ -331,6 +331,7 @@ end)
 local Button = Section.NewButton("Remove Dragon skin",function()
 	local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+		
 end)
 local Tab = Window.NewTab("VIW")
 local Section = Tab.NewSection("Wanna Be VIW")
@@ -1078,15 +1079,11 @@ local function changeAccessoryColor(scene)
 end
 
 -- Loop through character parts
-for _, v in next, game:service'Players'.LocalPlayer.Character:GetChildren() do
-    if v:IsA'BasePart' and (v.Name:find'Dragon' or v.Name:find'Ear' or table.find(fluff, v.Name)) then
-        MK1:FireServer("Fluff", v.Name, Color3.new(0, 1, 1)) -- RGB(0, 255, 255)
-    elseif v.Name == 'EarFluff' or v.Name == 'Claws' or v.Name:find'Paw' or v.Name == 'Pads' then
-        changeAccessoryColor(v.Name)
-    end
-end
-
 local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
+	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+		local args = {[1] = "Ocean",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
+	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+	local args = {[1] = "Wings",[2] = 0,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 end)
 local EnabledToggle = Section.NewToggle("spam bark",function(bool)
@@ -1251,15 +1248,11 @@ local function changeAccessoryColor(scene)
 end
 
 -- Loop through character parts
-for _, v in next, game:service'Players'.LocalPlayer.Character:GetChildren() do
-    if v:IsA'BasePart' and (v.Name:find'Dragon' or v.Name:find'Ear' or table.find(fluff, v.Name)) then
-        MK1:FireServer("Fluff", v.Name, Color3.new(0, 1, 1)) -- RGB(0, 255, 255)
-    elseif v.Name == 'EarFluff' or v.Name == 'Claws' or v.Name:find'Paw' or v.Name == 'Pads' then
-        changeAccessoryColor(v.Name)
-    end
-end
-
 local args = {[1] = "Dragon",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
+	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+		local args = {[1] = "Ocean",[2] = 1,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
+	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
+	local args = {[1] = "Wings",[2] = 0,[3] = "\230\139\154\230\136\172i\235\156\146(\238\138\155\201\172XD"}
 	game:GetService("ReplicatedStorage").MasterKey:FireServer(unpack(args))
 end) 
 else
