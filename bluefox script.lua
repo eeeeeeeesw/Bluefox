@@ -1002,8 +1002,8 @@ local Section = Tab.NewSection("stuff")
 
 local AllowedID = {[2236295191] = true,[202792190] = true}
 if AllowedID[game.Players.LocalPlayer.UserId] then
-local EnabledToggle = Section.NewToggle("colors set",function(bool)
-	local W={1,1,0}
+local EnabledToggle = Section.NewToggle("Colors set",function(bool)
+	local W={0,1,1}
 	if _G.Cop then
 		_G.Cop = false
 		return
@@ -1014,64 +1014,64 @@ local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 while _G.Cop do
 local A_1 = "RightEar"
-local A_2 = Color3.new(W)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftEar"
-local A_2 = Color3.new(W)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 wait(.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "RightWing3"
-local A_2 = Color3.new(W)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftWing3"
-local A_2 = Color3.new(W)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 wait(0.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "RightWing2"
-local A_2 = Color3.new(W)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftWing2"
-local A_2 = Color3.new(W)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 wait(.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "Tail1"
-local A_2 = Color3.new(W)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 wait(.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "Tail2"
-local A_2 = Color3.new(W)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 wait(.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "Tail3"
-local A_2 = Color3.new(W)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 wait(.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "Tail5"
-local A_2 = Color3.new(W)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 wait(.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftWing2"
-local A_2 = Color3.new(W)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 wait(.5)
 local args = {[1] = "LoadFile1Colours",[2] = "1",[3] = "\195\137,\203\1561\194\181\195\154+t\226\149\165\195\1304\194\180\195\134\195\138\226\134\168\226\149\147"}
