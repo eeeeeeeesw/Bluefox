@@ -1003,7 +1003,7 @@ local Section = Tab.NewSection("stuff")
 local AllowedID = {[2236295191] = true,[202792190] = true}
 if AllowedID[game.Players.LocalPlayer.UserId] then
 local EnabledToggle = Section.NewToggle("colors set",function(bool)
-	B={0,0,1} W={1,1,1}
+	b={0,0,1} w={1,1,1}
 function part(part,color)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
