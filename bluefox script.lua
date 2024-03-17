@@ -1003,76 +1003,48 @@ local Section = Tab.NewSection("stuff")
 local AllowedID = {[2236295191] = true,[202792190] = true}
 if AllowedID[game.Players.LocalPlayer.UserId] then
 local EnabledToggle = Section.NewToggle("colors set",function(bool)
-	B={0,1,1} W={1,1,1}
+	B={0,0,1} W={1,1,1}
+function part(part,color)
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+while _G.Cop do
+local A_1 = "part"
+local A_2 = Color3.new(color)
+local A_3 = "Advanced"
+end
 	if _G.Cop then
 		_G.Cop = false
 		return
 	else
 		_G.Cop = true
-	end	
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-while _G.Cop do
-local A_1 = "RightEar"
-local A_2 = Color3.new(W)
-local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "LeftEar"
-local A_2 = Color3.new(W)
-local A_3 = "Advanced"
-wait(.1)
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "RightWing3"
-local A_2 = Color3.new(W)
-local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "LeftWing3"
-local A_2 = Color3.new(W)
-local A_3 = "Advanced"
+	end
+part("RightEar",b)
+part("LeftEar",b)
 wait(0.1)
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "RightWing2"
-local A_2 = Color3.new(W)
-local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "LeftWing2"
-local A_2 = Color3.new(W)
-local A_3 = "Advanced"
-wait(.1)
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "Tail1"
-local A_2 = Color3.new(W)
-local A_3 = "Advanced"
-wait(.1)
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "Tail2"
-local A_2 = Color3.new(W)
-local A_3 = "Advanced"
-wait(.1)
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "Tail3"
-local A_2 = Color3.new(W)
-local A_3 = "Advanced"
-wait(.1)
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "Tail5"
-local A_2 = Color3.new(W)
-local A_3 = "Advanced"
-wait(.1)
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "LeftWing2"
-local A_2 = Color3.new(W)
-local A_3 = "Advanced"
+part("RightEar",w)
+part("LeftEar",w)
+part("RightEar",b)
+part("LeftEar",b)
+wait(0.1)
+part("RightWing3r",w)
+part("LeftWing3",w)
+part("RightWing2",b)
+part("LeftWing2",b)
+wait(0.1)
+part("RightWing3r",w)
+part("LeftWing3",w)
+part("Tail1",b)
+wait(0.1)
+part("Tail1",w)
+part("Tail2",b)
+wait(0.1)
+part("Tail2",w)
+part("Tail3",b)
+wait(0.1)
+part("Tail3",w)
+part("Tail5",b)
+wait(0.1)
+part("Tail1",w)
 wait(.5)
 local args = {[1] = "LoadFile1Colours",[2] = "1",[3] = "\195\137,\203\1561\194\181\195\154+t\226\149\165\195\1304\194\180\195\134\195\138\226\134\168\226\149\147"}
 	game:GetService("ReplicatedStorage").Save:InvokeServer(unpack(args))
