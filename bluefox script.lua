@@ -1003,11 +1003,12 @@ local Section = Tab.NewSection("stuff")
 local AllowedID = {[2236295191] = true,[202792190] = true}
 if AllowedID[game.Players.LocalPlayer.UserId] then
 local EnabledToggle = Section.NewToggle("colors set",function(bool)
-	b={0,0,1} w={1,1,1}
-function part(part,color)
+local b={0,0,1} 
+local w={1,1,1}
+function part(part,color,active)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
-while _G.Cop do
+while active do
 local A_1 = "part"
 local A_2 = Color3.new(color)
 local A_3 = "Advanced"
@@ -1018,33 +1019,33 @@ end
 	else
 		_G.Cop = true
 	end
-part("RightEar",b)
-part("LeftEar",b)
+part("RightEar",b,_G.Cop)
+part("LeftEar",b,_G.Cop)
 wait(0.1)
-part("RightEar",w)
-part("LeftEar",w)
-part("RightEar",b)
-part("LeftEar",b)
+part("RightEar",w,_G.Cop)
+part("LeftEar",w,_G.Cop)
+part("RightEar",b,_G.Cop)
+part("LeftEar",b,_G.Cop)
 wait(0.1)
-part("RightWing3r",w)
-part("LeftWing3",w)
-part("RightWing2",b)
-part("LeftWing2",b)
+part("RightWing3r",w,_G.Cop)
+part("LeftWing3",w,_G.Cop)
+part("RightWing2",b,_G.Cop)
+part("LeftWing2",b,_G.Cop)
 wait(0.1)
-part("RightWing3r",w)
-part("LeftWing3",w)
-part("Tail1",b)
+part("RightWing3r",w,_G.Cop)
+part("LeftWing3",w,_G.Cop)
+part("Tail1",b,_G.Cop)
 wait(0.1)
-part("Tail1",w)
-part("Tail2",b)
+part("Tail1",w,_G.Cop)
+part("Tail2",b,_G.Cop)
 wait(0.1)
-part("Tail2",w)
-part("Tail3",b)
+part("Tail2",w,_G.Cop)
+part("Tail3",b,_G.Cop)
 wait(0.1)
-part("Tail3",w)
-part("Tail5",b)
+part("Tail3",w,_G.Cop)
+part("Tail5",b,_G.Cop)
 wait(0.1)
-part("Tail1",w)
+part("Tail1",w,_G.Cop)
 wait(.5)
 local args = {[1] = "LoadFile1Colours",[2] = "1",[3] = "\195\137,\203\1561\194\181\195\154+t\226\149\165\195\1304\194\180\195\134\195\138\226\134\168\226\149\147"}
 	game:GetService("ReplicatedStorage").Save:InvokeServer(unpack(args))
