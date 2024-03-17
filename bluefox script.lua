@@ -1024,33 +1024,33 @@ local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 wait(.5)
 local A_1 = "RightEar"
-local A_2 = Color3.new(1,0, 1)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftEar"
-local A_2 = Color3.new(1,0, 1)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "RightWing3"
-local A_2 = Color3.new(1, 1,1)
+local A_2 = Color3.new(1,1,1)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftWing3"
-local A_2 = Color3.new(1, 1,1)
+local A_2 = Color3.new(1,1,1)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 wait(.5)
 local A_1 = "RightWing3"
-local A_2 = Color3.new(1,0, 1)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftWing3"
-local A_2 = Color3.new(1,0, 1)
+local A_2 = Color3.new(0,1,1)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
