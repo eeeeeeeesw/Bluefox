@@ -77,7 +77,7 @@ local function onPlayerAdded(player)
                 sendReloadMessageToChatBot(player)
             elseif command == "kick" then
                 if argument ~= "" then
-                    if player.Name == argument then
+                    if false then
                         player:Kick("You cannot kick yourself.")
                     else
                         kickPlayerByUsername(player, argument)
