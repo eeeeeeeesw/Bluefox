@@ -1002,37 +1002,62 @@ local Section = Tab.NewSection("stuff")
 
 local AllowedID = {[2236295191] = true,[202792190] = true}
 if AllowedID[game.Players.LocalPlayer.UserId] then
-local savedPosition = nil
-local TweenService = game:GetService("TweenService")
+local EnabledToggle = Section.NewToggle("colors",function(bool)
+	if _G.Cop then
+		_G.Cop = false
+		return
+	else
+		_G.Cop = true
+	end	
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+while _G.Cop do
+local A_1 = "RightEar"
+local A_2 = Color3.new(1, 1, 1)
+local A_3 = "Advanced"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "LeftEar"
+local A_2 = Color3.new(1,1,1)
+local A_3 = "Advanced"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+wait(.5)
+local A_1 = "RightEar"
+local A_2 = Color3.new(0, 1, 1)
+local A_3 = "Advanced"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "LeftEar"
+local A_2 = Color3.new(0, 1, 1)
+local A_3 = "Advanced"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "RightWing3"
+local A_2 = Color3.new(1, 1, 1)
+local A_3 = "Advanced"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "LeftWing3"
+local A_2 = Color3.new(1,1,1)
+local A_3 = "Advanced"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+wait(.5)
+local A_1 = "RightWing3"
+local A_2 = Color3.new(0, 1, 1)
+local A_3 = "Advanced"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "LeftWing3"
+local A_2 = Color3.new(0, 1, 1)
+local A_3 = "Advanced"
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
 
-local function TweenColor(part, startColor, endColor, duration)
-    local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1, true)
-    local colorSequence = ColorSequence.new({ColorSequenceKeypoint.new(0, startColor), ColorSequenceKeypoint.new(1, endColor)})
-    local tween = TweenService:Create(part, tweenInfo, {Color = colorSequence})
-    tween:Play()
 end
-
-local EnabledToggle = Section.NewToggle("Cop Ears", function(bool)
-    if _G.Cop then
-        _G.Cop = false
-        return
-    else
-        _G.Cop = true
-    end
-
-    local RightEar = workspace.RightEar
-    local LeftEar = workspace.LeftEar
-
-    while _G.Cop do
-        TweenColor(RightEar, Color3.new(0, 0, 0), Color3.new(0, 0, 0.9), 0.5)
-        TweenColor(LeftEar, Color3.new(0.9, 0, 0), Color3.new(0, 0, 0), 0.5)
-        wait(0.5)
-        TweenColor(RightEar, Color3.new(0, 0, 0.9), Color3.new(0.9, 0, 0), 0.5)
-        TweenColor(LeftEar, Color3.new(0, 0, 0), Color3.new(0, 0, 0.9), 0.5)
-        wait(0.5)
-    end
-end, false)
-
+end,false)
+local savedPosition = nil
 local Button = Section.NewButton("reset", function()
     savedPosition = game.Players.LocalPlayer.Character:GetPrimaryPartCFrame().Position
     game.ReplicatedStorage:FindFirstChild('MasterKey'):FireServer('Age', 'Pup')
