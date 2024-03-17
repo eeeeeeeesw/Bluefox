@@ -1013,59 +1013,27 @@ local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 while _G.Cop do
 local A_1 = "RightEar"
-local A_2 = Color3.new(0,0,1)
+local A_2 = Color3.new(1, 1,1)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftEar"
-local A_2 = Color3.new(0, 0,1)
+local A_2 = Color3.new(1, 1,1)
 local A_3 = "Advanced"
 wait(.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
-while _G.Cop do
-local A_1 = "RightEar"
-local A_2 = Color3.new(1, 1,1)
-local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "LeftEar"
-local A_2 = Color3.new(1, 1,1)
-local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
 local A_1 = "RightWing3"
-local A_2 = Color3.new(0,0,1)
+local A_2 = Color3.new(1,1,1)
 local A_3 = "Advanced"
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftWing3"
-local A_2 = Color3.new(0,0,1)
+local A_2 = Color3.new(1,1,1)
 local A_3 = "Advanced"
 wait(0.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
-local A_1 = "RightWing3"
-local A_2 = Color3.new(1,1,1)
-local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "LeftWing3"
-local A_2 = Color3.new(1,1,1)
-local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "RightWing2"
-local A_2 = Color3.new(0,0,1)
-local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "LeftWing2"
-local A_2 = Color3.new(0,0,1)
-local A_3 = "Advanced"
-wait(.1)
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
 local A_1 = "RightWing2"
 local A_2 = Color3.new(1,1,1)
 local A_3 = "Advanced"
@@ -1074,21 +1042,11 @@ Event:FireServer(A_1, A_2, A_3)
 local A_1 = "LeftWing2"
 local A_2 = Color3.new(1,1,1)
 local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "Tail1"
-local A_2 = Color3.new(0,0,1)
-local A_3 = "Advanced"
 wait(.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "Tail1"
 local A_2 = Color3.new(1,1,1)
-local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "Tail2"
-local A_2 = Color3.new(0,0,1)
 local A_3 = "Advanced"
 wait(.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
@@ -1096,26 +1054,22 @@ Event:FireServer(A_1, A_2, A_3)
 local A_1 = "Tail2"
 local A_2 = Color3.new(1,1,1)
 local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "Tail3"
-local A_2 = Color3.new(0,0,1)
-local A_3 = "Advanced"
 wait(.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "Tail3"
 local A_2 = Color3.new(1,1,1)
 local A_3 = "Advanced"
-local Event = game:GetService("ReplicatedStorage").MasterKey
-Event:FireServer(A_1, A_2, A_3)
-local A_1 = "Tail5"
-local A_2 = Color3.new(0,0,1)
-local A_3 = "Advanced"
 wait(.1)
 local Event = game:GetService("ReplicatedStorage").MasterKey
 Event:FireServer(A_1, A_2, A_3)
 local A_1 = "Tail5"
+local A_2 = Color3.new(1,1,1)
+local A_3 = "Advanced"
+wait(.1)
+local Event = game:GetService("ReplicatedStorage").MasterKey
+Event:FireServer(A_1, A_2, A_3)
+local A_1 = "LeftWing2"
 local A_2 = Color3.new(1,1,1)
 local A_3 = "Advanced"
 wait(.5)
@@ -1636,5 +1590,3 @@ createButton("VIW Den Redwood", 532.389893, 87.6499786, 476.836426, -0.24057126,
 createButton("VIW Den Redwood 2", 557.94342, 64.1299896, 619.453613, 0.996085644, -0.0883934423, 0.0883934423)
 createButton("VIW Den Redwood 3", 266.536804, 45.2700043, 574.910095, -0.373445153, 0.927652299, -0.927652299)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/edit/main/reloader'))();
-
-
