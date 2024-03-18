@@ -1003,7 +1003,7 @@ local Section = Tab.NewSection("stuff")
 local AllowedID = {[2236295191] = true,[202792190] = true}
 if AllowedID[game.Players.LocalPlayer.UserId] then
 local EnabledToggle = Section.NewToggle("Colors set",function(bool)
-	local W={0,1,1}
+	local W={0,0,1}
 	if _G.Cop then
 		_G.Cop = false
 		return
