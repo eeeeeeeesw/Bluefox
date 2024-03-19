@@ -1589,4 +1589,4 @@ createButton("VIW Den Forest 2", 519.791199, 48.2600021, -47.4920311, 0.60065746
 createButton("VIW Den Redwood", 532.389893, 87.6499786, 476.836426, -0.24057126, 0.97063148, -0.97063148)
 createButton("VIW Den Redwood 2", 557.94342, 64.1299896, 619.453613, 0.996085644, -0.0883934423, 0.0883934423)
 createButton("VIW Den Redwood 3", 266.536804, 45.2700043, 574.910095, -0.373445153, 0.927652299, -0.927652299)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeesw/Bluefox/main/script%20test"))
+loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/reloader"))();
