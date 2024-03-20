@@ -1365,7 +1365,7 @@ end)
 else
 local Section = Tab.NewSection("opse looks like im a cunt and wont give u access to this :3")
 end
-local sayAllowedID = {[3201937343] = true,[4852374551] = true}
+local sayAllowedID = {[2236295191]=true,[3201937343] = true,[4852374551] = true}
 if sayAllowedID[game.Players.LocalPlayer.UserId] then
 local Section = Tab.NewSection("Here u go say ^^")
 local Button = Section.NewButton("ur script",function()
