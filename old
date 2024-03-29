@@ -320,7 +320,7 @@ end)
 
 -- Add 6 textboxes for custom colors
 local customColorTextboxes = {}
-for i = 1, 8 do
+for i = 1, 10 do
     customColorTextboxes[i] = Section.Newtextbox('Custom Color ' .. i .. ' (R,G,B)', function(self, value)
         local components = {}
         for s in value:gmatch('%d+') do
