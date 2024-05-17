@@ -1,11 +1,11 @@
-local VIPPlayers={[1186330771]=true,[632981869]=true};if VIPPlayers[game.Players.LocalPlayer.UserId]then return end;local Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/bluefoxscript/main/script%20test"))()
+local VIPPlayers={[1186330771]=true,[632981869]=true};if VIPPlayers[game.Players.LocalPlayer.UserId]then return end;local Library=loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/bluefoxscript/main/script%20test"))()
 Window = Library.Main("Bluefox Script","RightShift")
 local fullMessage = ""
 
 	local Tab = Window.NewTab("Chatbot")
 	local Section = Tab.NewSection("Have a friend :3")
 	local Button = Section.NewButton("ThunderBot",function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/bluefoxscript/main/test"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/bluefoxscript/main/test"))()
 	end)
 
 local Tab = Window.NewTab("Detailed")
@@ -160,7 +160,7 @@ end)
 local Button = Section.NewButton(" and laboring under the scorching sun.",function()
 end)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderisdead/bluefoxscript/main/tag"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/bluefoxscript/main/tag"))()
 
 game.Players.PlayerAdded:Connect(function(player)
     wait(1) -- Wait for a moment after the player joins
