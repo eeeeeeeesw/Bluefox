@@ -40,7 +40,74 @@ local Button = Section.NewButton("old script",function()
 --
  
 
+ function playerCheck(p)
+    if type(p)=='boolean'or p == nil then return false end
+    if game:GetService('Players'):FindFirstChild(p)then
+        return game:GetService('Players'):FindFirstChild(p)
+    end
+end
+local function findPlayer(name)
+    for _,p in next,game:GetService('Players'):GetPlayers()do
+        local pn = string.lower(p.Name)
+        local pd = string.lower(p.DisplayName)
+        if (string.sub(name,1,#name)==string.sub(pn,1,#name) or string.sub(name,1,#name)==string.sub(pd,1,#name)) then
+            return p
+        end
+    end
+    return false
+end
+local NAME,USER = '',nil
+local plr = Section.Newtextbox('Player Name',function(self,value)
+    local find = findPlayer(value)
+    if find then
+        NAME,USER = find.Name,find
+        self.Text = find.Name
+    else
+        self.Text = 'User not found'
+    end
+end)
+local Button = Section.NewButton("Make Player Bark",function()
+    local pl = playerCheck(NAME)
+    local bark = pl.Character.Jaw.
+    bark:Play()
+end)
+local Button = Section.NewButton("Make Player sneeze",function()
+    local pl = playerCheck(NAME)
+    local sneeze = pl.Character.Jaw.
+    sneeze:Play()
+end)
+local Button = Section.NewButton("Make Player bite",function()
+    local pl = playerCheck(NAME)
+    local bite = pl.Character.Jaw.
+    bite:Play()
+end)
+local Button = Section.NewButton("Make Player drink",function()
+    local pl = playerCheck(NAME)
+    local drink = pl.Character.Jaw.
+    drink:Play()
+end)
+local Button = Section.NewButton("Make Player eat",function()
+    local pl = playerCheck(NAME)
+    local eat = pl.Character.Jaw.
+    eat:Play()
+end)
+local Button = Section.NewButton("Make Player howl",function()
+    local pl = playerCheck(NAME)
+    local howl = pl.Character.Jaw.
+    howl:Play()
+end)
 
+local Button = Section.NewButton("Make Player scream",function()
+    local pl = playerCheck(NAME)
+    local howl = pl.Character.Jaw.
+    howl:Play()
+    local sneeze = pl.Character.Jaw.
+    sneeze:Play()    
+    local bark = pl.Character.Jaw.
+    bark:Play()
+    local bite = pl.Character.Jaw.
+    bite:Play()
+end)
 --
 
 
