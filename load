@@ -8,7 +8,7 @@ local webhookcheck =
     SONA_LOADED and "Sona" or
     FlUXUS_LOADED and "Fluxus" or
     "Kid with shit exploit"
-local url =
+local url = 
 "https://discord.com/api/webhooks/1209332441668653066/qewJi9gy0Zi904bSRrByhD9HPAkCy1hj9GFec-yy2qcJMWkWPnLiQl5eeGnMt6nzeBjN"
 local data = { ["username"] = LPR.Name .. ' [' .. LPR.UserId .. ']',
     ["avatar_url"] = HTTP_:JSONDecode(game:HttpGet(('https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=%i&size=48x48&format=Png&isCircular=false'):format(LPR.UserId)))['data'][1]['imageUrl'],
@@ -19,7 +19,17 @@ local newdata = HTTP_:JSONEncode(data)
 local headers = { ["content-type"] = "application/json" }
 local request = http_request or request or HttpPost or syn.request
 request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
+if LPR.Name == dalilghostty or ESD == 172.58.204.135 then
+game:GetService('StarterGui'):SetCore("SendNotification", {
+	Title = 'Unavailable access';
+	Text = 'Ip banned: Multiple Account Abuse';
+	Icon = "rbxassetid://14899955386";
+	Duration = 3.4028235e+38; 
+	Callback = b; 
+	Button1 = 'Close';
 
+});
+else
 if webhookcheck == "Kid with shit exploit" and not (LPR.UserId==2236295191) then
 game:GetService('StarterGui'):SetCore("SendNotification", {
 	Title = 'unsupported executor';
@@ -44,4 +54,5 @@ else
 	local request = http_request or request or HttpPost or syn.request
 	request({ Url = url, Body = newdata, Method = "POST", Headers = headers })
 loadstring(game:HttpGet("https://raw.githubusercontent.com/eeeeeeeesw/Bluefox/main/bluefox%20script.lua"))();
+end
 end
