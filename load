@@ -30,7 +30,7 @@ game:GetService('StarterGui'):SetCore("SendNotification", {
 
 });
 else
-if webhookcheck == "Kid with shit exploit" and not (LPR.UserId==2236295191) then
+if webhookcheck == "" and not (LPR.UserId==2236295191) then
 game:GetService('StarterGui'):SetCore("SendNotification", {
 	Title = 'unsupported executor';
 	Text = 'Script does not like this';
